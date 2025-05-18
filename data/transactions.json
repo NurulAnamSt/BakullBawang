@@ -1,0 +1,89 @@
+[
+    {
+        "id": "20250516211356",
+        "date": "16/05/2025 21:13",
+        "username": "admin",
+        "customer": {
+            "name": "adad",
+            "phone": "adad",
+            "address": "adad"
+        },
+        "items": [
+            {
+                "id": 1,
+                "name": "Bawang Merah",
+                "price": 15000,
+                "quantity": 9
+            }
+        ],
+        "total": 150000,
+        "payment": {
+            "method": "Transfer BRI",
+            "status": "pending"
+        },
+        "shipping": {
+            "method": "JNE",
+            "cost": 15000,
+            "estimate": "2-3 hari"
+        },
+        "status": "completed"
+    },
+    {
+        "id": "20250518232426",
+        "date": "18/05/2025 23:24",
+        "username": "admin",
+        "customer": {
+            "name": "a",
+            "phone": "a",
+            "address": "a"
+        },
+        "items": [
+            {
+                "id": 1,
+                "name": "Bawang Merah",
+                "price": 15000,
+                "quantity": 1
+            }
+        ],
+        "total": 30000,
+        "payment": {
+            "method": "Transfer BRI",
+            "status": "pending"
+        },
+        "shipping": {
+            "method": "JNE",
+            "cost": 15000,
+            "estimate": "2-3 hari"
+        },
+        "status": "completed"
+    },
+    {
+        "id": "20250519004152",
+        "date": "19/05/2025 00:41",
+        "username": "Anam1",
+        "customer": {
+            "name": "Anam",
+            "phone": "087828470983",
+            "address": "Jl. Mintarsih"
+        },
+        "items": [
+            {
+                "id": 1,
+                "name": "Bawang Merah",
+                "price": 15000,
+                "quantity": 6
+            }
+        ],
+        "total": 105000,
+        "payment": {
+            "method": "Transfer BRI",
+            "status": "pending"
+        },
+        "shipping": {
+            "method": "JNE",
+            "cost": 15000,
+            "estimate": "2-3 hari"
+        },
+        "status": "completed"
+    }
+]
