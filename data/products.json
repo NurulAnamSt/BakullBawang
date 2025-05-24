@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Bawang Merah",
-        "price": 15000,
+        "price": 30000,
         "stock": 84,
         "description": "Bawang merah segar kualitas premium",
         "category": "bawang",
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "name": "Bibit Bawang Merah",
-        "price": 25000,
+        "price": 50000,
         "stock": 50,
         "description": "Bibit unggul siap tanam",
         "category": "bibit",
