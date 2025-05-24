@@ -14,7 +14,6 @@ PRODUCT_IMAGE_DIR = "assets/products/"
 
 ADMIN_USERNAME = "admin"
 ADMIN_PASSWORD = "admin123"
-WHATSAPP_NUMBER = "6281234567890"
 
 # ====================== FUNGSI UTILITAS ======================
 def setup_files():
@@ -386,12 +385,10 @@ def show_checkout_success():
     st.success("""
     ✅ **Pesanan Berhasil!**
     
-    Silakan lakukan pembayaran dan konfirmasi via WhatsApp:
+    Silakan lakukan pembayaran dan konfirmasi ke nomor WhatsApp berikut:
     """)
     
-    whatsapp_url = f"https://wa.me/{WHATSAPP_NUMBER}?text=Halo%20Admin,%20saya%20telah%20melakukan%20pembayaran"
-    if st.button("💬 Hubungi via WhatsApp", type="primary"):
-        webbrowser.open(whatsapp_url)
+    st.info("📱 WhatsApp: 087828470983")
     
     if st.button("🏠 Kembali ke Beranda"):
         st.session_state.checkout_success = False
@@ -449,9 +446,7 @@ def show_admin_report():
                         update_transaction_status(trans["id"], "pending")
                 
                 # Tombol WhatsApp
-                phone = trans['customer']['phone']
-                whatsapp_url = f"https://wa.me/{WHATSAPP_NUMBER}?text=Halo%20Admin,%20saya%20ingin%20konfirmasi%20pesanan%20#{trans['id']}"
-                st.link_button("💬 Hubungi Customer", whatsapp_url)
+                st.write(f"📱 Hubungi Customer: 087828470983")
 
 def update_transaction_status(trans_id, new_status):
     """Update status transaksi"""
