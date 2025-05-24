@@ -384,10 +384,10 @@ def show_checkout_success():
     st.success("""
     ✅ **Pesanan Berhasil!**
     
-    Silakan lakukan pembayaran dan konfirmasi ke nomor WhatsApp berikut:
+    Silakan lakukan pembayaran dan konfirmasi ke nomor berikut:
     """)
     
-    st.info("📱 WhatsApp: 087828470983")
+    st.markdown("📞 **Nomor Telepon:** 087828470983")
     
     if st.button("🏠 Kembali ke Beranda"):
         st.session_state.checkout_success = False
@@ -444,8 +444,9 @@ def show_admin_report():
                     if st.button("↪️ Kembalikan ke Pending", key=f"pending_{trans['id']}"):
                         update_transaction_status(trans["id"], "pending")
                 
-               st.write(f"📞 Nomor Customer: {trans['customer']['phone']}")
-            
+                # Tombol WhatsApp
+                st.write(f"📞 Nomor Customer: {trans['customer']['phone']}")
+
 def update_transaction_status(trans_id, new_status):
     """Update status transaksi"""
     transactions = load_from_json(TRANSACTIONS_FILE)
@@ -500,6 +501,10 @@ def manage_products():
                 save_to_json(PRODUCTS_FILE, products)
                 st.success("Produk berhasil ditambahkan!")
                 st.rerun()
+    
+
+
+
     
     st.subheader("📋 Daftar Produk")
     for product in products:
