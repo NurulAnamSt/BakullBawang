@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 import json
 import os
-import webbrowser
 from datetime import datetime
 
 # ====================== KONFIGURASI ======================
@@ -445,9 +444,8 @@ def show_admin_report():
                     if st.button("↪️ Kembalikan ke Pending", key=f"pending_{trans['id']}"):
                         update_transaction_status(trans["id"], "pending")
                 
-                # Tombol WhatsApp
-                st.write(f"📱 Hubungi Customer: 087828470983")
-
+               st.write(f"📞 Nomor Customer: {trans['customer']['phone']}")
+            
 def update_transaction_status(trans_id, new_status):
     """Update status transaksi"""
     transactions = load_from_json(TRANSACTIONS_FILE)
